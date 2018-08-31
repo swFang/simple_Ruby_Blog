@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
         @comment.article_id = params[:article_id]
 
         @comment.save
-        redirect_to_article_path(@comment.article)
+        redirect_to @comment.article
     end
 
     def comment_params
